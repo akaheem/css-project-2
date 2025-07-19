@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile eMart</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            /* background-color: blueviolet; */
+
+        }
+
+        .container {
+            width: 1024px;
+        }
+
+        /* ---HEADER--- */
+        /* ------------ */
+        .header {
+            width: 100%;
+            height: 82px;
+            background-color: rgb(203, 203, 203);
+            border-top: 5px solid rgb(255, 223, 0);
+            display: flex;
+
+        }
+
+        .header img {
+            width: 195px;
+            margin-left: 5px;
+
+        }
+
+        .header p {
+            font-size: 25px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 700;
+            margin-top: 45px;
+            border-bottom: 3px solid white;
+            margin-left: 475px;
+        }
+
+        #term1 {
+            color: rgb(255, 220, 0);
+        }
+
+        #term2 {
+            color: rgb(218, 52, 54);
+        }
+
+        /* ---HEADER--- */
+        /* ------------ */
+
+        /* ---NAVBAR--- */
+        /* ------------ */
+        .navbar {
+            background-color: rgb(230, 43, 43);
+            /* color: white; */
+            width: 100%;
+            height: 50px;
+        }
+
+        .navbar nav {
+            color: white;
+            /* background-color: aquamarine; */
+            height: 50px;
+            width: 100%;
+            display: block;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+
+        .navbar nav ul {
+            color: white;
+            margin: 0% 0px;
+        }
+
+        .navbar nav ul li {
+            display: inline-block;
+            list-style: none;
+        }
+
+        .navbar nav ul li a {
+            background-color: rgb(230, 43, 43);
+            color: white;
+            text-decoration: none;
+            padding: 0px 10px;
+            display: block;
+        }
+
+        .navbar nav ul li a:hover {
+            color: rgb(230, 43, 43);
+            background-color: aquamarine;
+
+        }
+
+        .navbar nav ul li ul li {
+            display: block;
+        }
+
+        .navbar nav ul li ul {
+            position: absolute;
+            background-color: antiquewhite;
+            display: none;
+        }
+
+        .navbar nav ul li:hover>ul {
+            display: block;
+        }
+
+        .navbar nav ul ul ul {
+            background-color: aqua;
+            left: 100%;
+            top: 80%;
+            width: 200px;
+        }
+
+        /* ------------ */
+        /* ---NAVBAR--- */
+
+        /* ----MAIN---- */
+        /* ------------ */
+        .main {
+            background-color: rgb(226, 226, 226);
+            width: 100%;
+            display: flex;
+
+        }
+
+        .aside {
+            width: 16%;
+            height: 228vh;
+            background-color: rgb(230, 43, 43);
+        }
+
+        .aside-list {
+            background-color: rgb(230, 43, 43);
+        }
+
+        .aside h1 {
+            font-size: 19px;
+            background-color: rgb(237, 237, 237);
+            padding: 8px 4px;
+            margin-right: 3px;
+            text-align: center;
+            line-height: 32px;
+        }
+
+        .aside-list-a {
+            background-color: rgb(237, 237, 237);
+            color: red;
+            height: 40px;
+            padding: 0px 15px;
+            text-decoration: none;
+            line-height: 40px;
+            display: block;
+            text-align: middle;
+            margin-right: 3px;
+
+        }
+
+        .aside-list-a:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .aside img {
+            background-color: rgb(237, 237, 237);
+            padding-top: 104px;
+            width: 98%;
+        }
+
+        .content {
+            width: 87%;
+            height: 228vh;
+            background-color: rgb(237, 237, 237);
+            float: left;
+        }
+
+        .content h1 {
+            width: 100%;
+            height: 30px;
+            font-size: 25px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .card {
+            width: 25%;
+            height: 50vh;
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 15px;
+            margin-left: 50px;
+            margin-top: 23px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            float: left;
+        }
+
+        .card:hover {
+            box-shadow: 2px 2px 3px 2px rgb(121, 120, 120);
+            scale: 1.03;
+            transition: 0.5s;
+        }
+
+        .card img {
+            padding: 5px 0px 0px 0px;
+            width: 100%;
+            max-height: 85%;
+        }
+        .card h2 {
+            margin-top: -25px;
+            color: rgb(102, 98, 95);
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .card button {
+            background-color: rgb(255, 43, 31);
+            color: white;
+            border: 1px solid rgb(255, 43, 31);
+            border-radius: 20px;
+            padding: 8px 22px;
+            /* cursor: pointer; */
+        }
+
+        .card button:hover {
+            background-color: white;
+            color: rgb(255, 43, 31);
+            scale: 1.02;
+            transition: 0.5s;
+            border: 5px solid whitesmoke;
+            cursor: pointer;
+        }
+        /* ------------ */
+        /* ----MAIN---- */
+
+        /* ----BANNER---- */
+        /* -------------- */
+        .hori-banner {
+            width: 100%;
+            height: 120px;
+            border-bottom: 3px solid rgb(230, 43, 43);
+        }
+
+        .hori-banner img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* -------------- */
+        /* ----BANNER---- */
+
+        /* ----FOOTER---- */
+        /* -------------- */
+        .footer {
+            background-color: rgb(203, 203, 203);
+            width: 100%;
+            min-height: 200px;
+            display: flex;
+        }
+        .footer-c{
+            width: 25%;
+        }
+        .footer-c h2{
+            color: rgb(69, 72, 71);
+            padding: 20px 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .footer-c ul{
+            list-style: none;
+        }
+        .footer-c ul li a{
+            text-decoration: none;
+            color: rgb(96, 98, 100);
+            line-height: 12px;
+            font-size: 18px;
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .footer-c ul li a:hover{
+            color: white;
+        }
+        .hr {
+            color:9px solid rgb(116, 115, 115);
+        }
+        .copyright   {
+            width: 100%;
+            height: 30px;
+            background-color: rgb(203, 203, 203);
+            text-align: center;
+        }
+        /* -------------- */
+        /* ----FOOTER---- */
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- HEADER -->
+        <!------------>
+        <div class="header">
+            <div><a href="#"><img src="Mobile Mart/EMart.png" alt="Logo"></a></div>
+            <div>
+                <p><span id="term1">WE </span><span id="term2">CARE </span><span id="term1">YOUR </span><span
+                        id="term2">Mobile</span></p>
+            </div>
+        </div>
+        <!------------>
+        <!-- HEADER -->
+
+        <!--- NAVBAR --->
+        <!-------------->
+        <div class="navbar">
+            <nav style="color: white;">
+                <ul>
+                    <li><a href="a">Home</a></li>
+                    <li><a href="a">About Us</a></li>
+                    <li><a href="a">Mobile Phones</a>
+                        <ul>
+                            <li><a href="">Wireless</a></li>
+                            <li><a href="">Windows</a></li>
+                            <li><a href="">IOS</a></li>
+                            <li><a href="">Ragged Mobiles</a></li>
+                            <li><a href="">Android</a>
+                                <ul>
+                                    <li><a href="a">Samsung</a></li>
+                                    <li><a href="a">Vivo</a></li>
+                                    <li><a href="a">Oppo</a></li>
+                                    <li><a href="a">Redmi</a></li>
+                                    <li><a href="a">Google</a>
+                                        <ul>
+                                            <li><a href="a">Pixel 4</a></li>
+                                            <li><a href="a">Pixel 4XL</a></li>
+                                            <li><a href="a">Pixel 5a</a></li>
+                                            <li><a href="a">Pixel 5</a></li>
+                                            <li><a href="a">Pixel 6a</a></li>
+                                            <li><a href="a">Pixel 6</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="a">Smart Phones</a>
+                        <ul>
+                            <li><a href="a">Iphone</a></li>
+                            <li><a href="a">Microsoft</a></li>
+                            <li><a href="a">Sony</a></li>
+                            <li><a href="a">Google</a></li>
+
+                            <li><a href="a">Samsung</a>
+                                <ul>
+                                    <li><a href="a">Z Flip</a></li>
+                                    <li><a href="a">Z Foolding</a></li>
+                                    <li><a href="a">Note Series</a></li>
+                                    <li><a href="a">A Series</a></li>
+                                    <li><a href="a">S Series</a>
+                                        <ul>
+                                            <li><a href="a">S20 Ultra</a></li>
+                                            <li><a href="a">S21 Ultra</a></li>
+                                            <li><a href="a">S22 Ultra</a></li>
+                                            <li><a href="a">S23 Ultra</a></li>
+                                            <li><a href="a">S24 Ultra</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="a">Accessories</a>
+                        <ul>
+                            <li><a href="a">Body</a></li>
+                            <li><a href="a">Headphone</a></li>
+                            <li><a href="a">Covers</a></li>
+                            <li><a href="a">Bluetooth</a></li>
+                            <li><a href="a">Other</a>
+                                <ul>
+                                    <li><a href="a">Glass Cover</a></li>
+                                    <li><a href="a">Back Sheet</a></li>
+                                    <li><a href="a">Sim Tray</a></li>
+                                    <li><a href="a">Battery</a></li>
+                                    <li><a href="a">Repairing</a>
+                                        <ul>
+                                            <li><a href="a">Panel</a></li>
+                                            <li><a href="a">Speaker</a></li>
+                                            <li><a href="a">Body</a></li>
+                                            <li><a href="a">Chip</a></li>
+                                            <li><a href="a">Patch</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="a">Tablets</a></li>
+                    <li><a href="a">My Account</a>
+                        <ul>
+                            <li><a href="">Linkedin</a></li>
+                            <li><a href="">X</a></li>
+                            <li><a href="">Threads</a></li>
+                            <li><a href="">Discord</a></li>
+                            <li><a href="">Slack</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-------------->
+        <!--- NAVBAR --->
+
+        <!--- MAIN --->
+        <!------------>
+        <div class="main">
+            <div class="aside">
+                <h1>Search by Brand:</h1>
+                <ul class="aside-list">
+                    <li><a class="aside-list-a" href="">Samsung</a></li>
+                    <li><a class="aside-list-a" href="">Huawei</a></li>
+                    <li><a class="aside-list-a" href="">Apple</a></li>
+                    <li><a class="aside-list-a" href="">Lenovo</a></li>
+                    <li><a class="aside-list-a" href="">Oppo</a></li>
+                    <li><a class="aside-list-a" href="">Microsoft</a></li>
+                    <li><a class="aside-list-a" href="">Nokia</a></li>
+                    <li><a class="aside-list-a" href="">LG</a></li>
+                    <li><a class="aside-list-a" href="">HTC</a></li>
+                    <li><a class="aside-list-a" href="">Sony</a></li>
+                    <li><a class="aside-list-a" href="">Motorola</a></li>
+                    <li><a class="aside-list-a" href="">Black Berry</a></li>
+                    <li><a class="aside-list-a" href="">Vivo</a></li>
+                    <li><a class="aside-list-a" href="">Ericson</a></li>
+                    <li><a class="aside-list-a" href="">Qmobile</a></li>
+                    <li><a class="aside-list-a" href="">Other</a></li>
+                </ul>
+                <a href="#"><img class="banner-vertical" src="Mobile Mart/banner_vertical.jpg" alt="Mart Banner"></a>
+            </div>
+            <div class="content">
+                <h1>Apple Mobile Phones</h1>
+                <div class="card">
+                    <a href="#"><img src="Mobile Mart/1.png" alt="Iphone"></a>
+                    <h2>Apple Iphone X</h2>
+                    <p>Rs 125,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 175px; height: 240px;" src="Mobile Mart/2.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 8+</h2>
+                    <p>Rs 96,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 120px; height: 237px;" src="Mobile Mart/3.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 8</h2>
+                    <p>Rs 92,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 120px; height: 240px;" src="Mobile Mart/4.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 7+</h2>
+                    <p>Rs 85,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 120px; height: 240px;" src="Mobile Mart/5.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 7</h2>
+                    <p>Rs 80,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 120px; height: 240px;" src="Mobile Mart/6.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 6S+</h2>
+                    <p>Rs 75,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 240px; height: 240px;" src="Mobile Mart/7.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 6S</h2>
+                    <p>Rs 72,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 120px; height: 240px;" src="Mobile Mart/8.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 6</h2>
+                    <p>Rs 65,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 240px; height: 240px;" src="Mobile Mart/9.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 5S</h2>
+                    <p>Rs 60,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 240px; height: 240px;" src="Mobile Mart/10.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 5</h2>
+                    <p>Rs 55,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 120px; height: 240px;" src="Mobile Mart/11.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 4S</h2>
+                    <p>Rs 52,500</p>
+                    <button>But Now</button>
+                </div>
+                <div class="card">
+                    <a href="#"><img style="width: 175px; height: 240px;" src="Mobile Mart/2.png" alt="Iphone"></a>
+                    <h2>Apple Iphone 4</h2>
+                    <p>Rs 45,500</p>
+                    <button>But Now</button>
+                </div>
+            </div>
+        </div>
+        <!------------>
+        <!--- MAIN --->
+
+        <!--- BANNER --->
+        <!-------------->
+        <div class="hori-banner">
+            <a href="#"><img src="Mobile Mart/banner_horizontal.png" alt="Horizontal Banner"></a>
+        </div>
+        <!-------------->
+        <!--- BANNER --->
+
+        <!--- FOOTER --->
+        <!-------------->
+        <div class="footer">
+            <div class="footer-c">
+                <img src="Mobile Mart/EMart.png" alt="E Mart Logo">
+                <address>1st Floor,253-Mobile eMart,Badr Plaza, Gujranwala. <br> Email: <a href="">info@mobileemart.pk</a> <br>Phone : 0553215866</address>
+            </div>
+            <div class="footer-c">
+                <h2>Stay Connected</h2>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Linkedin</a></li>
+                    <li><a href="#">Google+</a></li>
+                </ul>
+            </div>
+            <div class="footer-c">
+                <h2>Payment Methods</h2>
+                <ul>
+                    <li><a href="">Easy Paisa</a></li>
+                    <li><a href="">Jazz Cash</a></li>
+                    <li><a href="">UBL Omni</a></li>
+                    <li><a href="">Visa Card</a></li>
+                    <li><a href="">Master Card</a></li>
+                </ul>
+            </div>
+            <div class="footer-c">
+                <h2>How to Buy</h2>
+                <ul>
+                    <li><a href="">Creat an Account</a></li>
+                    <li><a href="">Making payments</a></li>
+                    <li><a href="">Delivery Options</a></li>
+                    <li><a href="">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--- FOOTER --->
+        <!-------------->
+        
+        <hr class="hr">    
+        
+        <!--- COPYRIGHT --->
+        <!----------------->
+        <div class="copyright">
+            <p>Copyright &copy; 2018 Mobile eMart. Designed By: IBRAHEEM</p>
+        </div>
+        <!----------------->        
+        <!--- COPYRIGHT --->
+    </div>
+    
+    </div>
+</body>
+
+</html>
